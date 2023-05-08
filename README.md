@@ -27,7 +27,10 @@
     dotnet run
 
 #### non funziona il programma e non legge il nostro database.
-#### 6) Scarichiamo ora sul visual studio l'estensione SQLite per SQLiteConnection che dava errore.
+#### 6) Scarichiamo ora sul visual studio l'estensione SQLite per SQLiteConnection che dava errore al collegamento con la tabella artists.
+#### Tabella artists :
+![tabella artist](https://user-images.githubusercontent.com/116793076/236861408-d828a0fd-b18c-496c-911d-71087014319e.png)
+
 #### 7) Andiamo sul terminale e scriviamo un nuovo comando:
 ####
       dotnet add package sqlite-net-pcl
@@ -48,14 +51,18 @@
       Console.WriteLine($"{artista.Name}");
     }
     //-------------
-    public class Artist
+    public class Artist                 
     {
-      public int ArtistId { get; set; }
+      public int ArtistId { get; set; } 
       public string Name { get; set; }
     }
+#### ArtistId e Name sono gli attributi presi dalla classe Artist.
 #### 9) Adesso rifacciamo il test sul terminale per vedere se il programma legge gli artisti sul database
 #### 
     dotnet run
+    
+![programma funziona](https://user-images.githubusercontent.com/116793076/236860188-2446cc65-81f2-4941-83d2-f87d0e38a361.png)
+
 #### Vediamo che il programma riesce a leggere gli artisti in ordine decrescente e l'obbiettivo è stato raggiunto con successo.
 ### Ti ringrazio se hai seguito la mia spiegazione.
 ## Programma scritto da Ghinelli Johan Valentino, alunno di Conti M. e Sartini M.
